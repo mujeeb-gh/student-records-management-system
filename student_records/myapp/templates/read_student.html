@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ student.full_name }}{% endblock %}
+
+{% block content %}
+        <!-- read_student.html -->
+    <h1>{{ student.full_name }}</h1>
+    <p>Matric Number: {{ student.matric_number }}</p>
+    <p>Department: {{ student.department }}</p>
+    <p>CGPA: {{ student.cgpa }}</p>
+    {% if student.passport_photo %}
+        <img src="{{ student.passport_photo.url }}" alt="{{ student.full_name }}'s Passport Photo">
+    {% else %}
+        <p>No passport photo available.</p>
+    {% endif %}
+    <a href="{% url 'download_report' student.matric_number %}">Download Report</a>
+    <a href="{% url 'homepage' %}">OK</a>
+
+{% endblock %}

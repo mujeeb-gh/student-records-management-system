@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<!-- homepage.html -->
+  <h1>Student Records</h1>
+  <ul>
+      {% for student in students %}
+          <li>
+              {{ student.full_name }} - {{ student.matric_number }}
+              <a href="{% url 'edit_student' student.matric_number %}">Edit</a>
+              <a href="{% url 'delete_student' student.matric_number %}">Delete</a>
+              <a href="{% url 'read_student' student.matric_number %}">Read</a>              
+          </li>
+      {% endfor %}
+  </ul>
+  <a href="{% url 'add_student' %}">Add Student</a>
+
+{% endblock %}
