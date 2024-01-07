@@ -1,3 +1,0 @@
-<a href="{% url 'edit_student' student.matric_number %}">Edit</a>
-              <a href="{% url 'delete_student' student.matric_number %}">Delete</a>
-              <a href="{% url 'read_student' student.matric_number %}">Read</a>

@@ -1,0 +1,313 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a common font family and box-sizing */
+body {
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Apply styles to the body */
+.body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styling */
+.header {
+  background-color: #4285f4;  /* Use your preferred color */
+  color: #fff;
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+}
+
+/* Add more styles as needed */
+
+/* Homepage specific styles */
+/* main.css */
+
+/* ... (previous styles) */
+
+/* Homepage specific styles */
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.student-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.student-info {
+  /* Styles for the student information span */
+  flex-grow: 1;
+}
+
+.student-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.matric-number,
+.student-department {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-link,
+.read-link,
+.delete-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #4285f4;
+  cursor: pointer;
+}
+
+.edit-link:hover,
+.read-link:hover,
+.delete-link:hover {
+  background-color: #3367d6;
+}
+
+.add-student-btn {
+  display: block;
+  margin-top: 20px;
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+/* Styles for add_student page */
+.add-student-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+  width: 100%; /* Set the desired width */
+  padding: 8px; /* Adjust padding for better appearance */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.cancel-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
+
+/* main.css */
+
+/* ... (previous styles) */
+
+/* Additional styles for the read_student page */
+
+.read-student-details {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.read-student-photo {
+  width: 100px;
+  max-height: 150px;
+  border-radius: 5px;
+}
+
+.read-student-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.read-bottom-section {
+  margin-top: 20px;
+}
+
+.detail {
+  margin-bottom: 10px;
+}
+
+.read-action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-link,
+.read-ok-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.download-link {
+  background-color: #4285f4;
+}
+
+.read-ok-link {
+  background-color: #34a853;
+}
+
+.download-link:hover,
+.read-ok-link:hover {
+  background-color: #3367d6;
+}
+
+/* Additional styles for the delete_student page */
+
+.delete-student {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.delete-message {
+  margin-bottom: 20px;
+}
+
+.delete-form {
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.cancel-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edit-link,
+  .delete-link,
+  .read-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+

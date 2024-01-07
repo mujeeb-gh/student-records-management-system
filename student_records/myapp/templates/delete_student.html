@@ -3,14 +3,14 @@
 {% block title %}Delete {{ student.full_name }}{% endblock %}
 
 {% block content %}
-  <!-- delete_student.html -->
-  <h1>Delete Student</h1>
-  <p>Are you sure you want to delete {{ student.name }} (Matric Number: {{ student.matric_number }})?</p>
-  <form method="post">
-      {% csrf_token %}
-      <button type="submit">Yes, Delete</button>
-  </form>
-  <a href="{% url 'homepage' %}">Cancel</a>
-
-
+    <!-- delete_student.html -->
+    <div class="delete-student">
+        <h1 class="delete-title">Delete Student</h1>
+        <p class="delete-message">Are you sure you want to delete {{ student.name }} (Matric Number: {{ student.matric_number }})?</p>
+        <form class="delete-form" method="post">
+            {% csrf_token %}
+            <button class="delete-btn" type="submit">Yes, Delete</button>
+        </form>
+        <a class="cancel-link" href="{% url 'homepage' %}">Cancel</a>
+    </div>
 {% endblock %}

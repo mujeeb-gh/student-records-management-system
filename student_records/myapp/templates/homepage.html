@@ -4,17 +4,33 @@
 
 {% block content %}
 <!-- homepage.html -->
-  <h1>Student Records</h1>
-  <ul>
+  <h1 class="page-title">Student Records</h1>
+  <ul class="student-list">
       {% for student in students %}
-          <li>
-              {{ student.full_name }} - {{ student.matric_number }}
-              <a href="{% url 'edit_student' student.matric_number %}">Edit</a>
-              <a href="{% url 'delete_student' student.matric_number %}">Delete</a>
-              <a href="{% url 'read_student' student.matric_number %}">Read</a>              
+          <li class="student-item">
+              <img class="student-photo" src="{{ student.passport_photo.url }}" alt="{{ student.full_name }} photo">
+              <div class="student-info">
+                  <span class="student-name">{{ student.full_name }}</span> 
+                  <span class="separator">|</span> 
+                  <span class="matric-number">{{ student.matric_number }}</span>
+                  <span class="separator">|</span> 
+                  <span class="student-department">{{ student.department }}</span>
+              </div>
+              <div class="action-buttons">
+                  <a class="edit-link" href="{% url 'edit_student' student.matric_number %}">
+                    <i class='bx bxs-edit-alt'></i>Edit
+                  </a>
+                  <a class="read-link" href="{% url 'read_student' student.matric_number %}">
+                    <i class='bx bxs-user-detail' ></i>Read
+                  </a>
+                  <a class="delete-link" href="{% url 'delete_student' student.matric_number %}">
+                    <i class='bx bxs-user-minus'></i>Delete
+                  </a>
+              </div>
           </li>
       {% endfor %}
   </ul>
-  <a href="{% url 'add_student' %}">Add Student</a>
-
+  <a class="add-student-btn" href="{% url 'add_student' %}">
+    <i class='bx bxs-user-plus'></i> Add Student
+  </a>
 {% endblock %}

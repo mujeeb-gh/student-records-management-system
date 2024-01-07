@@ -3,17 +3,24 @@
 {% block title %}{{ student.full_name }}{% endblock %}
 
 {% block content %}
-        <!-- read_student.html -->
-    <h1>{{ student.full_name }}</h1>
-    <p>Matric Number: {{ student.matric_number }}</p>
-    <p>Department: {{ student.department }}</p>
-    <p>CGPA: {{ student.cgpa }}</p>
-    {% if student.passport_photo %}
-        <img src="{{ student.passport_photo.url }}" alt="{{ student.full_name }}'s Passport Photo">
-    {% else %}
-        <p>No passport photo available.</p>
-    {% endif %}
-    <a href="{% url 'download_report' student.matric_number %}">Download Report</a>
-    <a href="{% url 'homepage' %}">OK</a>
-
+    <!-- read_student.html -->
+    <div class="read-student-details">
+        <div class="read-top-section">
+            {% if student.passport_photo %}
+                <img class="read-student-photo" src="{{ student.passport_photo.url }}" alt="{{ student.full_name }}'s Passport Photo">
+            {% else %}
+                <p>No passport photo available.</p>
+            {% endif %}
+            <h1 class="read-student-name">{{ student.full_name }}</h1>
+        </div>
+        <div class="read-bottom-section">
+            <p class="detail">Matric Number: {{ student.matric_number }}</p>
+            <p class="detail">Department: {{ student.department }}</p>
+            <p class="detail">CGPA: {{ student.cgpa }}</p>
+            <div class="read-action-buttons">
+                <a class="download-link" href="{% url 'download_report' student.matric_number %}">Download Report</a>
+                <a class="read-ok-link" href="{% url 'homepage' %}">OK</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

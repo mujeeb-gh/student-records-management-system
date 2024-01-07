@@ -1,15 +1,40 @@
 {% extends 'base.html' %}
 
-{% block title %}Edit {{ student.full_name }}{% endblock %}
+{% block title %}Edit Student{% endblock %}
 
 {% block content %}
-  <!-- edit_student.html -->
-  <h1>Edit Student</h1>
-  <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Update Student</button>
-  </form>
-  <a href="{% url 'homepage' %}">Cancel</a>
+    <h1 class="page-title">Edit Student</h1>
+    <form class="add-student-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Group related fields together -->
+        <div class="form-group">
+            <label for="{{ form.full_name.id_for_label }}">Full Name:</label>
+            {{ form.full_name }}
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.matric_number.id_for_label }}">Matric Number:</label>
+            {{ form.matric_number }}
+        </div>
 
+        <div class="form-group">
+            <label for="{{ form.department.id_for_label }}">Department:</label>
+            {{ form.department }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.cgpa.id_for_label }}">CGPA:</label>
+            {{ form.cgpa }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.passport_photo.id_for_label }}">Passport Photo:</label>
+            {{ form.passport_photo }}
+        </div>
+
+        <!-- Submit button -->
+        <button class="add-student-btn" type="submit">Update</button>
+    </form>
+    <a class="cancel-link" href="{% url 'homepage' %}">Cancel</a>
 {% endblock %}
