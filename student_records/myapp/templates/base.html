@@ -1,4 +1,8 @@
 {% load static%}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{{ form.media }}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link href="//cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/css/bootstrap- datetimepicker.min.css" rel="stylesheet">
 
   <link rel="shortcut icon" href="{% static 'img/user-circle-solid-36.png' %}" type="image/x-icon">
 
@@ -19,6 +24,9 @@
   <title>
     {% block title %}Student Records Management System{% endblock %}
   </title>
+
+  {{ form.media.css }}
+  {{form.media.js }}
 </head>
 <body class="body">
   <header class="header" id="header">
@@ -33,6 +41,9 @@
   <main>
     {% block content %}{% endblock %}
   </main>
+
+  <script src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdn.bootcss.com/moment.js/2.17.1/moment.min.js"></script>
   
 </body>
 </html>

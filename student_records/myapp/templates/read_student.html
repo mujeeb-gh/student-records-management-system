@@ -17,6 +17,14 @@
             <p class="detail">Matric Number: {{ student.matric_number }}</p>
             <p class="detail">Department: {{ student.department }}</p>
             <p class="detail">CGPA: {{ student.cgpa }}</p>
+            <p class="detail">Gender: {{ student.gender }}</p>
+            <p class="detail">Age: {{ student.age }}</p>
+            <p class="detail">Date of Birth: {{ student.date_of_birth }}</p>
+            <p class="detail">Phone Number: {{ student.contact_no }}</p>
+            <p class="detail">Address: {{ student.address }}</p>
+            <p class="detail">Email: {{ student.email }}</p>
+            <p class="detail">Nationality: {{ student.nationality }}</p>
+            <p class="detail">State of Origin: {{ student.state }}</p>
             <div class="read-action-buttons">
                 <a class="download-link" href="{% url 'download_report' student.matric_number %}">Download Report</a>
                 <a class="read-ok-link" href="{% url 'homepage' %}">OK</a>
