@@ -4,25 +4,17 @@
 
 The Student Records Management System is an application built with Django, designed for administrative processes associated with managing student information. This system provides comprehensive support for Create, Read, Update, and Delete (CRUD) operations, offering administrators an efficient means to add, retrieve, modify, and remove student records. The system simplifies the tasks associated with handling student data.
 
-## Screenshots
-![Homepage](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/homepage.png)
-
-![Create Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/add_student.png)
-
-![Read Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/read_student.png)
-
-![Update Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/edit_student.png)
-
-![Delete Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/delete_student.png)
-
-https://github.com/mujeeb-gh/student-records-management-system/assets/79882268/34bb8105-0335-4ee4-9f9e-7461814fbc22
-
 ## Table of Contents
 
 - [student-records-management-system](#student-records-management-system)
   - [A CRUD Student Records Management System built with Django](#a-crud-student-records-management-system-built-with-django)
-  - [Screenshots](#screenshots)
   - [Table of Contents](#table-of-contents)
+  - [Screenshots](#screenshots)
+    - [Home](#home)
+    - [Create Student Record](#create-student-record)
+    - [Read Student Record](#read-student-record)
+    - [Update Student Record](#update-student-record)
+    - [Delete Student Record](#delete-student-record)
   - [Installation](#installation)
   - [Database Setup](#database-setup)
   - [Usage](#usage)
@@ -30,6 +22,24 @@ https://github.com/mujeeb-gh/student-records-management-system/assets/79882268/3
       - [Homepage](#homepage)
       - [Add Student](#add-student)
       - [More...](#more)
+
+## Screenshots
+
+### Home
+![Homepage](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/homepage.png)
+
+### Create Student Record
+![Create Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/add_student.png)
+
+### Read Student Record
+![Read Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/read_student.png)
+
+### Update Student Record
+![Update Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/edit_student.png)
+
+### Delete Student Record
+![Delete Student Page](https://github.com/mujeeb-gh/student-records-management-system/blob/master/docs/images/delete_student.png)
+
 
 ## Installation
 
