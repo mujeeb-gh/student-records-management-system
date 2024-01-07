@@ -71,19 +71,3 @@ def delete_student(request, matric_number):
         return redirect('homepage')
 
     return render(request, 'delete_student.html', {'student': student})
-
-def add_student_success(request):
-  return render(request, 'add_student_success.html')
-
-
-def get_student(request, matric_number):
-  student = get_object_or_404(Student, matric_number=matric_number)
-  data = {
-      'matric_number': student.matric_number,
-      'full_name': student.full_name,
-      'passport': student.passport,
-      'department': student.department,
-      'college': student.college,
-      'cgpa': student.cgpa,
-  }
-  return JsonResponse(data)
