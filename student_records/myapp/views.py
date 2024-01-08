@@ -32,7 +32,7 @@ def download_report(request, matric_number):
     student = get_object_or_404(Student, matric_number=matric_number)
 
     # Create a PDF report
-    template_path = 'read_student.html'
+    template_path = 'report.html'
     context = {'student': student}
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = f'attachment; filename="{matric_number}_report.pdf"'
