@@ -80,6 +80,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.student-item:hover {
+  box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
 }
 
 .student-photo {
