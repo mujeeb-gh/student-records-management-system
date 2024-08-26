@@ -1,6 +1,6 @@
 # student-records-management-system
 
-## A CRUD Student Records Management System built with Django
+## A CRUD Student Records Management System built with Django ... SSR
 
 The Student Records Management System is an application built with Django, designed for administrative processes associated with managing student information. This system provides comprehensive support for Create, Read, Update, and Delete (CRUD) operations, offering administrators an efficient means to add, retrieve, modify, and remove student records. The system simplifies the tasks associated with handling student data.
 
